@@ -14,9 +14,11 @@
       <span class="brand-name">Lickens Ogal</span>
     </div>
     <nav>
-      <ul>
+      <button id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -48,6 +50,21 @@
       </ul>
     </section>
 
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-list">
+        <div class="edu-item">
+          <span class="edu-title">B.Sc. in Computer Science (Expected 2026)</span>
+          <span class="edu-desc">University of [Your University]</span>
+        </div>
+        <div class="edu-item">
+          <span class="edu-title">Professional Certification in Digital Marketing</span>
+          <span class="edu-desc">Google Digital Garage, 2024</span>
+        </div>
+        <!-- Add more as needed -->
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-grid" id="projectsGrid">
@@ -57,17 +74,9 @@
 
     <section id="blog">
       <h2>Blog</h2>
-      <div class="blog-list" id="blogList">
-        <!-- Blog posts will be injected by JS -->
-      </div>
-      <div class="blog-form">
-        <h3>Add a Blog Post</h3>
-        <form id="blogForm">
-          <input type="text" id="blogTitle" placeholder="Title" required>
-          <textarea id="blogContent" placeholder="Content" rows="4" required></textarea>
-          <button type="submit">Add Post</button>
-        </form>
-      </div>
+      <div class="blog-featured" id="blogFeatured"></div>
+      <div class="blog-list" id="blogList"></div>
+      <!-- No form for public! -->
     </section>
 
     <section id="contact">
@@ -83,17 +92,29 @@
   </main>
 
   <footer>
-    <div class="footer-social">
-      <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><img src="facebook.svg" alt="Facebook"></a>
-      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><img src="linkedin.svg" alt="LinkedIn"></a>
-      <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><img src="instagram.svg" alt="Instagram"></a>
-      <a href="https://github.com/lickensogal" target="_blank" aria-label="GitHub"><img src="github.svg" alt="GitHub"></a>
-    </div>
     <div class="footer-menu">
-      <a href="#about">About</a> | <a href="#projects">Projects</a> | <a href="#blog">Blog</a> | <a href="#contact">Contact</a>
+      <a href="https://facebook.com/" target="_blank">Facebook</a> | 
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> | 
+      <a href="https://instagram.com/" target="_blank">Instagram</a> | 
+      <a href="https://github.com/lickensogal" target="_blank">GitHub</a>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a> | 
+      <a href="#projects">Projects</a> | 
+      <a href="#blog">Blog</a> | 
+      <a href="#contact">Contact</a>
     </div>
     <p class="footer-copy">&copy; 2025 Lickens Ogal. Crafted with heart & vision.</p>
   </footer>
+
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="blogModalClose">&times;</span>
+      <h3 id="modalBlogTitle"></h3>
+      <span id="modalBlogCategory"></span>
+      <div id="modalBlogContent"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
