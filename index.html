@@ -1,42 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potfolio</title>
+    <title>Portfolio</title><link rel="stylesheet" href="copy.css">
 
-    <link rel="stylesheet" href="copy.css">
+<!-- box icons -->
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
-    <!-- box icons -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head><body><header class="header">
+    <a href="#" class="logo">Portfolio.</a>
 
+    <i id="menu-icon" class="fas fa-bars"></i>
 
-</head>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portofolio">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<body>
-
-    <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
-    
-        <i id="menu-icon" class="fas fa-bars"></i>
-    
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portofolio">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <!-- home section design -->
-    <div class="home-content">
+<!-- home section design -->
+<div class="home-content" id="home">
     <div class="text-content">
         <h2>Hello, It's Me</h2>
         <h1>Lickens Ogal</h1>
@@ -46,8 +36,7 @@
              <a href="documents/ANTONY_MULE_CV.pdf" download class="btn">Download CV</a>
         </div>
 
-
-        <!-- Move social icons here -->
+        <!-- Social icons -->
         <div class="home-sci">
             <a href="https://github.com/AntolTECHS" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://instagram.com/antol.tech_solutions" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -62,7 +51,6 @@
 
 <!-- about section design -->
 <section class="about" id="about">
-
     <div class="about-img">
         <img src="images/abt2.jpg" alt="">
     </div>
@@ -79,97 +67,89 @@
     </div>
 </section>
 
-    <section>
-        <div class="services" id="services">
-            <div class="container">
-                <h1 class="sub-title">My <span>Services</span></h1>
-                <div class="services-list">
-                 <div>
-                    <i class='bx bx-code-alt' style='color:#00eeff'  ></i>
-                      <h2>Web Development</h2>
-                       <p>I offer web development services, creating responsive, high-performance websites with modern
-                             technologies to enhance functionality, user experience, and business growth.</p>
-                         <a href="#" class="read">learn more</a>
-                 </div>
-                  <div>
-                    <i class='bx bx-vector' style='color:#00eeff'  ></i>
-                      <h2>UI/UX Design</h2>
-                      <p>I provide UI/UX design services, crafting intuitive, user-friendly interfaces that enhance engagement, 
-                        usability, and brand identity for websites and apps.</p>
-                        <a href="#" class="read">learn more</a>
-                  </div>
-                  <div>
-                    <i class='bx bxs-crop' style='color:#00eeff'  ></i>
-                    <h2>Graphic Design</h2>
-                    <p>I provide graphic design services, creating visually compelling logos, branding, marketing materials,
-                         and digital assets to enhance brand identity and engagement.</p>
-                      <a href="#" class="read">learn more</a>
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <h1 class="sub-title">My <span>Services</span></h1>
+        <div class="services-list">
+             <div>
+                <i class='bx bx-code-alt'></i>
+                  <h2>Web Development</h2>
+                  <p>I offer web development services, creating responsive, high-performance websites with modern
+                     technologies to enhance functionality, user experience, and business growth.</p>
+                  <a href="#" class="read">Learn more</a>
+             </div>
+              <div>
+                <i class='bx bx-vector'></i>
+                  <h2>UI/UX Design</h2>
+                  <p>I provide UI/UX design services, crafting intuitive, user-friendly interfaces that enhance engagement, 
+                    usability, and brand identity for websites and apps.</p>
+                  <a href="#" class="read">Learn more</a>
+              </div>
+              <div>
+                <i class='bx bxs-crop'></i>
+                <h2>Graphic Design</h2>
+                <p>I provide graphic design services, creating visually compelling logos, branding, marketing materials,
+                     and digital assets to enhance brand identity and engagement.</p>
+                  <a href="#" class="read">Learn more</a>
+            </div>
+            <div>
+                <i class='bx bx-play-circle'></i>
+                <h2>Video Editing</h2>
+                <p>I provide professional video editing services, enhancing visuals, storytelling, 
+                    and engagement through seamless cuts, effects, color correction, and high-quality production.</p>
+                  <a href="#" class="read">Learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portofolio" id="portofolio">
+    <div class="main-text" id="project">
+        <h2>Latest <span>Projects</span></h2>
+        <div class="portofolio-content">
+            <div class="row">
+                <img src="images/prj1.png" alt="">
+                <div class="layer">
+                    <h5>Responsive Ecommerce Website</h5>
+                    <p>An elegant eCommerce website offering seamless shopping,
+                       secure payments, and a user-friendly experience with diverse products for every need.</p>
                 </div>
-                <div>
-                    <i class='bx bx-play-circle' style='color:#00eeff'  ></i>
-                    <h2>Video Editing</h2>
-                    <p>I provide professional video editing services, enhancing visuals, storytelling, 
-                        and engagement through seamless cuts, effects, color correction, and high-quality production.</p>
-                      <a href="#" class="read">learn more</a>
+            </div>
+
+            <div class="row">
+                <img src="images/prj2.png" alt="">
+                <div class="layer">
+                    <h5>Responsive Tour and Travel Website</h5>
+                    <p>A tour and travel website offering bookings, destination guides, itineraries, reviews, 
+                        and personalized trip planning for seamless global travel experiences.</p>
                 </div>
-                
+            </div>
+
+            <div class="row">
+                <img src="images/prj3.png" alt="">
+                <div class="layer">
+                    <h5>LEARN: A Dynamic Online Learning Management System</h5>
+                    <p>A dynamic online learning platform offering interactive courses, user profiles, teacher management, and seamless profile updates for personalized education.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="images/prj1.png" alt="">
+                <div class="layer">
+                    <h5>Responsive Ecommerce Website</h5>
+                    <p>An elegant eCommerce website offering seamless shopping,
+                       secure payments, and a user-friendly experience with diverse products for every need.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    
-    <section class="portofolio" id="portofolio">
-        <div>
-            <div class="main-text" id="project">
-                <h2>Latest<span>Projects</span></h2>
-                <div class="portofolio-content">
-                    <div class="row">
-                        <img src="images/prj1.png" alt="">
-                        <div class="layer">
-                            <h5>Responsive Ecommerce Website</h5>
-                            <p>An elegant eCommerce website offering seamless shopping,
-                                 secure payments, and a user-friendly experience with diverse products for every need.</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="images/prj2.png" alt="">
-                        <div class="layer">
-                            <h5>Responsive Tour and Travel Website</h5>
-                            <p>A tour and travel website offering bookings, destination guides, itineraries, reviews, 
-                                and personalized trip planning for seamless global travel experiences.</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="images/prj3.png" alt="">
-                        <div class="layer">
-                            <h5>LEARN: A Dynamic Online Learning Management System</h5>
-                            <p>A dynamic online learning platform offering interactive courses, user profiles, teacher management, and seamless profile updates for personalized education.
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <img src="images/prj1.png" alt="">
-                        <div class="layer">
-                            <h5>Responsive Ecommerce Website</h5>
-                            <p>An elegant eCommerce website offering seamless shopping,
-                                 secure payments, and a user-friendly experience with diverse products for every need.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+<!-- Contact Section -->
 <section class="contact" id="contact">
-    <h2 class="heading">
-        Contact <span style="color: #0ef;">Me!</span><span class="animate scroll" style="--i:1;"></span>
-    </h2>
+    <h2 class="heading">Contact <span>Me!</span></h2>
 
     <form action="https://formspree.io/f/xdkelawo" method="POST">
         <div class="input-box">
@@ -181,7 +161,6 @@
                 <input type="email" name="email" placeholder="Email" required>
                 <span class="focus"></span>
             </div>
-            <span class="animate scroll" style="--i:3;"></span>
         </div>
 
         <div class="textarea-field">
@@ -194,17 +173,13 @@
     </form>
 </section>
 
-
-
-   <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
     <p class="footer-text">© 2025 Lickens Ogal. All rights Reserved.</p>
     <a href="#" class="footer-icon"><i class='bx bx-up-arrow-alt'></i></a>
 </footer>
 
+<script src="copy.js"></script>
 
-
-
-    <script src="copy.js"></script>
 </body>
-
-  </html>
+        </html>
