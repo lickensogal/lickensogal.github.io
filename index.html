@@ -1,121 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lickens Ogal | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potfolio</title>
+
+    <link rel="stylesheet" href="copy.css">
+
+    <!-- box icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+
 </head>
+
 <body>
-  <header>
-    <div class="brand">
-      <span class="logo-circle">L</span>
-      <span class="brand-name">Lickens Ogal</span>
-    </div>
-    <nav>
-      <button id="navToggle" aria-label="Toggle navigation">&#9776;</button>
-      <ul id="navMenu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="about">
-      <img src="me.jpg" alt="Lickens Ogal" class="profile-img">
-      <h1>Hi, I’m Lickens Ogal</h1>
-      <p class="subtitle">Creative Problem Solver | Web Designer | Digital Marketer</p>
-      <p class="about-text">
-        I’m Lickens Ogal—a creative problem solver with a passion for web design, graphic design, digital marketing, and the future of technology. With a strong foundation in aspiring web development and a growing mastery of AI tools, I help brands, businesses, and creators build digital experiences that stand out and drive real results.<br><br>
-        From crafting visually engaging websites to strategizing content that connects, I blend technical skills with storytelling to deliver work that not only looks good but works great. I thrive in fast-paced environments and enjoy learning new tools to stay ahead of the curve—from responsive design principles to automation workflows and content strategy.<br><br>
-        <strong>What sets me apart?</strong> I bring heart into every project. I believe in clarity, creativity, and consistency—and I show up with purpose every time. Whether it's launching a personal brand, boosting engagement, or streamlining digital systems, I’m all about helping ideas come to life online.
-      </p>
-    </section>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+    
+        <i id="menu-icon" class="fas fa-bars"></i>
+    
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">services</a>
+            <a href="#portofolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- home section design -->
+    <div class="home-content">
+    <div class="text-content">
+        <h2>Hello, It's Me</h2>
+        <h1>Antony Mule</h1>
+        <h3>And I'm a <span class="text"></span></h3>
 
-    <section id="skills">
-      <h2>Skills & Tools</h2>
-      <ul class="skills-list">
-        <li>Web Design (WordPress, HTML/CSS, JavaScript)</li>
-        <li>AI & Automation Tools (ChatGPT, Canva AI, Zapier, etc.)</li>
-        <li>Digital Marketing (SEO, Content Strategy, Social Media Growth)</li>
-        <li>Visual Content Creation (Graphics, Reels, Branding)</li>
-        <li>Communication & Team Collaboration</li>
-      </ul>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-list">
-        <div class="edu-item">
-          <span class="edu-title">B.Sc. in Computer Science (Expected 2026)</span>
-          <span class="edu-desc">University of [Your University]</span>
+        <div class="btn-box">
+             <a href="documents/ANTONY_MULE_CV.pdf" download class="btn">Download CV</a>
         </div>
-        <div class="edu-item">
-          <span class="edu-title">Professional Certification in Digital Marketing</span>
-          <span class="edu-desc">Google Digital Garage, 2024</span>
+
+
+        <!-- Move social icons here -->
+        <div class="home-sci">
+            <a href="https://github.com/AntolTECHS" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/antol.tech_solutions" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/Antony-Mule-24b4712aa" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-        <!-- Add more as needed -->
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Projects will be injected by JS -->
-      </div>
-    </section>
-
-    <section id="blog">
-      <h2>Blog</h2>
-      <div class="blog-featured" id="blogFeatured"></div>
-      <div class="blog-list" id="blogList"></div>
-      <!-- No form for public! -->
-    </section>
-
-    <section id="contact">
-      <h2>Contact & Inquiry</h2>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Inquiry</button>
-        <p id="contactMsg"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-menu">
-      <a href="https://facebook.com/" target="_blank">Facebook</a> | 
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> | 
-      <a href="https://instagram.com/" target="_blank">Instagram</a> | 
-      <a href="https://github.com/lickensogal" target="_blank">GitHub</a>
     </div>
-    <div class="footer-links">
-      <a href="#about">About</a> | 
-      <a href="#projects">Projects</a> | 
-      <a href="#blog">Blog</a> | 
-      <a href="#contact">Contact</a>
-    </div>
-    <p class="footer-copy">&copy; 2025 Lickens Ogal. All Rights Reserved.</p>
-  </footer>
 
-  <div id="blogModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="blogModalClose">&times;</span>
-      <h3 id="modalBlogTitle"></h3>
-      <span id="modalBlogCategory"></span>
-      <div id="modalBlogContent"></div>
+    <div class="image">
+        <img src="images/Profile.png" alt="Profile Picture">
     </div>
-  </div>
+</div>
 
-  <script src="script.js"></script>
+<!-- about section design -->
+<section class="about" id="about">
+
+    <div class="about-img">
+        <img src="images/abt2.jpg" alt="">
+    </div>
+
+    <div class="about-text">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p>
+            I'm a Software Developer, Graphic Designer, UI/UX Designer, 
+            and Video Editor passionate about creating seamless digital experiences. 
+            I develop efficient software, design intuitive interfaces, 
+            craft compelling visuals, and edit engaging videos—all with a focus on innovation and impact.
+        </p>
+        <a href="#contact" class="btn">Contact</a>
+    </div>
+</section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My <span>Services</span></h1>
+                <div class="services-list">
+                 <div>
+                    <i class='bx bx-code-alt' style='color:#00eeff'  ></i>
+                      <h2>Web Development</h2>
+                       <p>I offer web development services, creating responsive, high-performance websites with modern
+                             technologies to enhance functionality, user experience, and business growth.</p>
+                         <a href="#" class="read">learn more</a>
+                 </div>
+                  <div>
+                    <i class='bx bx-vector' style='color:#00eeff'  ></i>
+                      <h2>UI/UX Design</h2>
+                      <p>I provide UI/UX design services, crafting intuitive, user-friendly interfaces that enhance engagement, 
+                        usability, and brand identity for websites and apps.</p>
+                        <a href="#" class="read">learn more</a>
+                  </div>
+                  <div>
+                    <i class='bx bxs-crop' style='color:#00eeff'  ></i>
+                    <h2>Graphic Design</h2>
+                    <p>I provide graphic design services, creating visually compelling logos, branding, marketing materials,
+                         and digital assets to enhance brand identity and engagement.</p>
+                      <a href="#" class="read">learn more</a>
+                </div>
+                <div>
+                    <i class='bx bx-play-circle' style='color:#00eeff'  ></i>
+                    <h2>Video Editing</h2>
+                    <p>I provide professional video editing services, enhancing visuals, storytelling, 
+                        and engagement through seamless cuts, effects, color correction, and high-quality production.</p>
+                      <a href="#" class="read">learn more</a>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="portofolio" id="portofolio">
+        <div>
+            <div class="main-text" id="project">
+                <h2>Latest<span>Projects</span></h2>
+                <div class="portofolio-content">
+                    <div class="row">
+                        <img src="images/prj1.png" alt="">
+                        <div class="layer">
+                            <h5>Responsive Ecommerce Website</h5>
+                            <p>An elegant eCommerce website offering seamless shopping,
+                                 secure payments, and a user-friendly experience with diverse products for every need.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="images/prj2.png" alt="">
+                        <div class="layer">
+                            <h5>Responsive Tour and Travel Website</h5>
+                            <p>A tour and travel website offering bookings, destination guides, itineraries, reviews, 
+                                and personalized trip planning for seamless global travel experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="images/prj3.png" alt="">
+                        <div class="layer">
+                            <h5>LEARN: A Dynamic Online Learning Management System</h5>
+                            <p>A dynamic online learning platform offering interactive courses, user profiles, teacher management, and seamless profile updates for personalized education.
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="images/prj1.png" alt="">
+                        <div class="layer">
+                            <h5>Responsive Ecommerce Website</h5>
+                            <p>An elegant eCommerce website offering seamless shopping,
+                                 secure payments, and a user-friendly experience with diverse products for every need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="heading">
+        Contact <span style="color: #0ef;">Me!</span><span class="animate scroll" style="--i:1;"></span>
+    </h2>
+
+    <form action="https://formspree.io/f/xdkelawo" method="POST">
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email" required>
+                <span class="focus"></span>
+            </div>
+            <span class="animate scroll" style="--i:3;"></span>
+        </div>
+
+        <div class="textarea-field">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <span class="focus"></span>
+        </div>
+
+        <!-- Clean, standalone button -->
+        <button type="submit" class="btn">Send</button>
+    </form>
+</section>
+
+
+
+   <footer class="footer">
+    <p class="footer-text">© 2025 Antony Mule</p>
+    <a href="#" class="footer-icon"><i class='bx bx-up-arrow-alt'></i></a>
+</footer>
+
+
+
+
+    <script src="copy.js"></script>
 </body>
-</html>
+
+  </html>
