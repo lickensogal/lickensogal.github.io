@@ -59,6 +59,12 @@ body {
     margin-left: 70px;
 }
 
+.logo img {
+    height: 50px; /* adjust as needed */
+    width: auto;
+    display: block;
+}
+
 .navbar {
     display: flex;
     gap: 1.5rem;
