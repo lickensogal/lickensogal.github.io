@@ -3,129 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lickens Ogal - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Lickens Ogal - Full-Stack Developer, AI Enthusiast, UI/UX Designer specializing in modern web solutions">
+    <title>Lickens Ogal | Full-Stack Developer & Digital Creator</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Typed.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Lickens Ogal Logo">
+                <img src="images/logo.png" alt="Lickens Ogal" class="logo-light">
+                <img src="images/logo-dark.png" alt="Lickens Ogal" class="logo-dark">
             </a>
             
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="#contact">Contact</a>
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
             </nav>
             
-            <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
+    <section class="hero">
+        <div class="container">
             <div class="hero-content">
-                <h3>Hello, It's Me</h3>
-                <h1>Lickens Ogal</h1>
-                <h2>A <span class="typed-text"></span></h2>
-                <p>Crafting digital experiences through code, design, and creativity. Transforming ideas into reality with passion and precision.</p>
-                
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                <div class="hero-image-top">
+                    <div class="image-wrapper">
+                        <img src="images/profile.png" alt="Lickens Ogal">
+                        <div class="image-glow"></div>
+                    </div>
                 </div>
                 
-                <div class="social-links">
-                    <a href="https://github.com/lickensogal" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/lickensogal" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/lickens_ogal?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/Lickens_Ogal?t=iQx8I_vOjIR3jH3n1Xw5uA&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Lickens Ogal</h1>
+                    <h2 class="hero-title">
+                        <span class="typed-text"></span>
+                        <span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Transforming ideas into powerful digital experiences through innovative code, 
+                        stunning design, and strategic thinking. Building the future, one project at a time.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            View My Work
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            Hire Me
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="https://github.com/lickensogal" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lickensogal" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lickens_ogal" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com/Lickens_Ogal" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="images/Profile.png" alt="Lickens Ogal">
-                    <div class="image-border"></div>
-                </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Trust Stats -->
+    <section class="stats">
         <div class="container">
-            <div class="section-header">
-                <h2>About <span>Me</span></h2>
-                <p>Passionate professional with diverse skills in technology and design</p>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="25">0</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Software Developer</h3>
-                    <p>Building robust and scalable applications with modern technologies. Expertise in web development, creating responsive and performant solutions.</p>
+                    <h3 class="stat-number" data-target="7">0</h3>
+                    <p class="stat-label">Services Offered</p>
                 </div>
                 
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
                     </div>
-                    <h3>Graphic Designer</h3>
-                    <p>Creating visually stunning designs that communicate brand messages effectively. From logos to complete branding solutions.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3>UI/UX Designer</h3>
-                    <p>Designing intuitive user interfaces and experiences that delight users. Focus on usability, accessibility, and modern design principles.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Digital Marketer</h3>
-                    <p>Driving business growth through strategic digital marketing campaigns. SEO, social media, and content marketing expertise.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Editor</h3>
-                    <p>Producing engaging video content with professional editing techniques. Storytelling through motion graphics and seamless cuts.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI Enthusiast</h3>
-                    <p>Exploring artificial intelligence applications and sharing innovative AI solutions. Staying ahead with emerging technologies.</p>
+                    <h3 class="stat-number" data-target="3">0</h3>
+                    <p class="stat-label">Years Experience</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- About Preview -->
+    <section class="about-preview section">
         <div class="container">
             <div class="section-header">
-                <h2>My <span>Services</span></h2>
-                <p>Comprehensive solutions tailored to your needs</p>
+                <span class="section-label">Get To Know Me</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <p class="section-subtitle">Passionate creator dedicated to excellence</p>
+            </div>
+            
+            <div class="about-content">
+                <p class="about-text">
+                    I'm a multidisciplinary digital professional with expertise spanning software development, 
+                    design, and digital marketing. My journey in technology has been driven by an insatiable 
+                    curiosity and a commitment to creating solutions that make a real impact. From building 
+                    responsive web applications to crafting compelling brand identities, I bring a comprehensive 
+                    approach to every project.
+                </p>
+                
+                <a href="about.html" class="btn btn-outline">
+                    Read Full Story
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">My <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">Comprehensive solutions for your digital needs</p>
             </div>
             
             <div class="services-grid">
@@ -133,27 +191,16 @@
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    
-                    <h3>WordPress Web Design</h3>
-                    <p>Strategic digital marketing solutions to grow your business online. From SEO to social media management, driving results through data-driven campaigns.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> SEO Optimization</li>
-                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
-                        <li><i class="fas fa-check"></i> Content Strategy</li>
-                        <li><i class="fas fa-check"></i> Analytics & Reporting</li>
-                    </ul>
-                    <a href="project-detail.html" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
-                </div>
-                    
                     <h3>Web Development</h3>
-                    <p>Creating responsive, high-performance websites with modern technologies. From landing pages to complex web applications, I deliver solutions that enhance functionality and user experience.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Responsive Design</li>
-                        <li><i class="fas fa-check"></i> Modern Frameworks</li>
-                        <li><i class="fas fa-check"></i> Performance Optimized</li>
-                        <li><i class="fas fa-check"></i> SEO Friendly</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <p>Custom websites and web applications built with modern technologies</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress Development</h3>
+                    <p>Professional WordPress sites with custom themes and plugins</p>
                 </div>
                 
                 <div class="service-card">
@@ -161,222 +208,134 @@
                         <i class="fas fa-paint-brush"></i>
                     </div>
                     <h3>UI/UX Design</h3>
-                    <p>Crafting intuitive, user-friendly interfaces that enhance engagement and usability. Creating seamless experiences that align with your brand identity and business goals.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> User Research</li>
-                        <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
-                        <li><i class="fas fa-check"></i> Visual Design</li>
-                        <li><i class="fas fa-check"></i> Usability Testing</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <p>Intuitive interfaces that enhance user experience and engagement</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-layer-group"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
                     <h3>Graphic Design</h3>
-                    <p>Creating visually compelling logos, branding materials, and digital assets. Enhancing brand identity through professional design that captures attention and communicates effectively.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Logo Design</li>
-                        <li><i class="fas fa-check"></i> Brand Identity</li>
-                        <li><i class="fas fa-check"></i> Marketing Materials</li>
-                        <li><i class="fas fa-check"></i> Social Media Graphics</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <p>Compelling visuals that communicate your brand message effectively</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Video Editing</h3>
-                    <p>Professional video editing services that enhance storytelling and engagement. Seamless cuts, effects, color correction, and high-quality production for impactful content.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Professional Editing</li>
-                        <li><i class="fas fa-check"></i> Color Grading</li>
-                        <li><i class="fas fa-check"></i> Motion Graphics</li>
-                        <li><i class="fas fa-check"></i> Sound Design</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategic digital marketing solutions to grow your business online. From SEO to social media management, driving results through data-driven campaigns.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> SEO Optimization</li>
-                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
-                        <li><i class="fas fa-check"></i> Content Strategy</li>
-                        <li><i class="fas fa-check"></i> Analytics & Reporting</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI Resources</h3>
-                    <p>Sharing innovative AI solutions and creative ideas. Helping you leverage artificial intelligence for enhanced productivity and cutting-edge digital experiences.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> AI Tools & Solutions</li>
-                        <li><i class="fas fa-check"></i> Workflow Automation</li>
-                        <li><i class="fas fa-check"></i> Creative AI Applications</li>
-                        <li><i class="fas fa-check"></i> Training & Consultation</li>
-                    </ul>
-                    <a href="#contact" class="service-btn">Get Started <i class="fas fa-arrow-right"></i></a>
-                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="services.html" class="btn btn-primary">
+                    View All Services
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- Featured Projects -->
+    <section class="projects-preview section">
         <div class="container">
             <div class="section-header">
-                <h2>Latest <span>Projects</span></h2>
-                <p>Showcasing my recent work and achievements</p>
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Showcasing my best work and achievements</p>
             </div>
             
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/prj1.png" alt="Ecommerce Website">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Responsive Ecommerce Website</h3>
-                        <p>An elegant eCommerce platform offering seamless shopping experience with secure payments and user-friendly interface.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/prj2.png" alt="Tour Website">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Tour and Travel Website</h3>
-                        <p>Complete travel solution with bookings, destination guides, and personalized trip planning for seamless experiences.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>CSS</span>
-                            <span>API</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/prj3.png" alt="Learning Platform">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>LEARN: Online LMS</h3>
-                        <p>Dynamic learning platform with interactive courses, user profiles, and teacher management for personalized education.</p>
-                        <div class="project-tags">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/prj1.png" alt="Portfolio Website">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p>Modern portfolio showcasing creative work with smooth animations and responsive design for optimal viewing.</p>
-                        <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
+            <div id="featured-projects" class="projects-grid">
+                <!-- Projects loaded dynamically from JSON -->
+            </div>
+            
+            <div class="section-cta">
+                <a href="projects.html" class="btn btn-primary">
+                    View Full Portfolio
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Tech Stack Preview -->
+    <section class="tech-stack section">
         <div class="container">
             <div class="section-header">
-                <h2>Get In <span>Touch</span></h2>
-                <p>Let's discuss your next project</p>
+                <span class="section-label">Technologies</span>
+                <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
             </div>
             
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>Have a project in mind? I'm always open to discussing new opportunities and creative ideas.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>lickensogal@email.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Available for remote work</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Working Hours</h4>
-                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
                 </div>
-                
-                <form class="contact-form" action="https://formspree.io/f/xdkelawo" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
-                </form>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-wordpress"></i>
+                    <span>WordPress</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-figma"></i>
+                    <span>Figma</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="about.html" class="btn btn-outline">
+                    View Full Tech Stack
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section class="blog-preview section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Insights & Tips</span>
+                <h2 class="section-title">Latest <span class="highlight">Blog Posts</span></h2>
+                <p class="section-subtitle">Sharing knowledge and experiences</p>
+            </div>
+            
+            <div id="latest-blog-posts" class="blog-grid">
+                <!-- Blog posts loaded dynamically from JSON -->
+            </div>
+            
+            <div class="section-cta">
+                <a href="blog.html" class="btn btn-primary">
+                    View All Posts
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build Something Amazing?</h2>
+                <p>Let's collaborate and bring your vision to life with cutting-edge solutions</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
             </div>
         </div>
     </section>
@@ -385,60 +344,64 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-about">
                     <h3>Lickens Ogal</h3>
-                    <p>Creating digital experiences through code, design, and creativity.</p>
+                    <p>Full-Stack Developer & Digital Creator passionate about building innovative solutions and sharing knowledge.</p>
                     <div class="footer-social">
                         <a href="https://github.com/lickensogal" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/lickensogal" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/lickens_ogal?igsh=YzljYTk1ODg3Zg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/lickens_ogal" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/Lickens_Ogal?t=iQx8I_vOjIR3jH3n1Xw5uA&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://x.com/Lickens_Ogal" target="_blank"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
-                
                 
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
-                        <li><a href="#services">Graphic Design</a></li>
-                        <li><a href="#services">Video Editing</a></li>
-                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="services/web-development.html">Web Development</a></li>
+                        <li><a href="services/wordpress-development.html">WordPress</a></li>
+                        <li><a href="services/ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="#projects">Portfolio</a></li>
-                        <li><a href="#services">AI Resources</a></li>
-                        <li><a href="#contact">Hire Me</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Lickens Ogal. All Rights Reserved.</p>
-                <a href="#home" class="back-to-top">
-                    <i class="fas fa-arrow-up"></i> Back to Top
-                </a>
+                <p>&copy; 2025 Lickens Ogal. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
             </div>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <!-- JavaScript Files -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/projects-loader.js"></script>
+    <script src="js/blog-loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
