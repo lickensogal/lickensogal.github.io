@@ -1,1 +1,126 @@
-
+{
+  "projects": [
+    {
+      "id": "ecommerce-platform",
+      "title": "Responsive E-Commerce Platform",
+      "category": "Web Development",
+      "tags": ["E-Commerce", "React", "Node.js", "MongoDB"],
+      "thumbnail": "images/projects/ecommerce.jpg",
+      "featured": true,
+      "shortDescription": "A full-featured online shopping platform with secure payments and modern UI",
+      "fullDescription": "An elegant eCommerce website offering seamless shopping, secure payment integration, and user-friendly experience. Features include product filtering, shopping cart, user authentication, admin dashboard for inventory management, and responsive design optimized for all devices.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe", "JWT"],
+      "features": [
+        "User authentication and authorization",
+        "Product catalog with advanced filtering",
+        "Shopping cart with real-time updates",
+        "Secure payment integration with Stripe",
+        "Admin dashboard for inventory management",
+        "Order tracking and management",
+        "Responsive design for all devices",
+        "RESTful API architecture"
+      ],
+      "challenges": [
+        {
+          "problem": "Managing state across multiple components for the shopping cart",
+          "solution": "Implemented Redux for centralized state management, ensuring consistent cart data across all pages"
+        },
+        {
+          "problem": "Optimizing load times with large product images",
+          "solution": "Implemented lazy loading and image optimization techniques, reducing load time by 60%"
+        }
+      ],
+      "results": [
+        "Successfully launched with 500+ products",
+        "98% uptime in first 6 months",
+        "Average page load time under 2 seconds",
+        "Positive user feedback on checkout experience"
+      ],
+      "liveUrl": "https://example.com",
+      "githubUrl": "https://github.com/lickensogal/ecommerce",
+      "images": [
+        "images/projects/ecommerce-1.jpg",
+        "images/projects/ecommerce-2.jpg",
+        "images/projects/ecommerce-3.jpg"
+      ],
+      "date": "2024-12-01",
+      "client": "Personal Project",
+      "duration": "3 months"
+    },
+    {
+      "id": "tour-travel-website",
+      "title": "Tour & Travel Booking Platform",
+      "category": "Web Development",
+      "tags": ["Tourism", "React", "API Integration"],
+      "thumbnail": "images/projects/travel.jpg",
+      "featured": true,
+      "shortDescription": "Complete travel solution with bookings and destination guides",
+      "fullDescription": "A comprehensive tour and travel website offering seamless bookings, destination guides, itineraries, reviews, and personalized trip planning for global travel experiences.",
+      "technologies": ["React", "Node.js", "Google Maps API", "Payment Gateway"],
+      "features": [
+        "Destination search and filters",
+        "Interactive booking system",
+        "Travel itinerary builder",
+        "Customer reviews and ratings",
+        "Payment integration",
+        "Admin dashboard"
+      ],
+      "liveUrl": "https://example.com/travel",
+      "githubUrl": "https://github.com/lickensogal/travel",
+      "images": ["images/projects/travel-1.jpg"],
+      "date": "2024-10-15",
+      "client": "Travel Agency",
+      "duration": "2 months"
+    },
+    {
+      "id": "learning-management-system",
+      "title": "LEARN - Online Learning Platform",
+      "category": "Web Development",
+      "tags": ["Education", "PHP", "MySQL"],
+      "thumbnail": "images/projects/lms.jpg",
+      "featured": true,
+      "shortDescription": "Dynamic LMS with interactive courses and teacher management",
+      "fullDescription": "A dynamic online learning platform offering interactive courses, user profiles, teacher management, and seamless profile updates for personalized education experiences.",
+      "technologies": ["PHP", "MySQL", "Bootstrap", "jQuery"],
+      "features": [
+        "Course management system",
+        "Student enrollment",
+        "Teacher dashboard",
+        "Assignment submission",
+        "Grade tracking",
+        "Video lessons"
+      ],
+      "liveUrl": "https://example.com/lms",
+      "githubUrl": "https://github.com/lickensogal/lms",
+      "images": ["images/projects/lms-1.jpg"],
+      "date": "2024-08-20",
+      "client": "Educational Institution",
+      "duration": "4 months"
+    },
+    {
+      "id": "wordpress-business-site",
+      "title": "Professional WordPress Business Site",
+      "category": "WordPress Development",
+      "tags": ["WordPress", "Custom Theme", "SEO"],
+      "thumbnail": "images/projects/wordpress.jpg",
+      "featured": true,
+      "shortDescription": "Custom WordPress site with advanced features and SEO optimization",
+      "fullDescription": "A professional WordPress website built with custom theme, WooCommerce integration, and advanced SEO optimization for maximum visibility.",
+      "technologies": ["WordPress", "PHP", "WooCommerce", "Elementor", "Yoast SEO"],
+      "features": [
+        "Custom theme development",
+        "WooCommerce integration",
+        "SEO optimization",
+        "Contact form integration",
+        "Blog functionality",
+        "Mobile responsive"
+      ],
+      "liveUrl": "https://example.com/wp",
+      "githubUrl": null,
+      "images": ["images/projects/wordpress-1.jpg"],
+      "date": "2024-11-10",
+      "client": "Small Business",
+      "duration": "1.5 months"
+    }
+  ]
+    }
