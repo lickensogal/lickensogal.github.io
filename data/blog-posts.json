@@ -1,0 +1,137 @@
+{
+  "posts": [
+    {
+      "id": "getting-started-react",
+      "title": "Getting Started with React: A Beginner's Guide",
+      "slug": "getting-started-react",
+      "author": "Lickens Ogal",
+      "date": "2025-01-15",
+      "category": "Web Development",
+      "subcategory": "React",
+      "tags": ["React", "JavaScript", "Frontend", "Tutorial"],
+      "thumbnail": "images/blog/react-guide.jpg",
+      "excerpt": "Learn the fundamentals of React and build your first component-based application with this comprehensive guide.",
+      "readTime": 8,
+      "featured": true,
+      "content": "<p>React has revolutionized the way we build user interfaces...</p><h2>What is React?</h2><p>React is a JavaScript library...</p>",
+      "views": 1250,
+      "likes": 89
+    },
+    {
+      "id": "ai-tools-productivity",
+      "title": "10 AI Tools That Will Boost Your Productivity in 2025",
+      "slug": "ai-tools-productivity",
+      "author": "Lickens Ogal",
+      "date": "2025-01-10",
+      "category": "AI & Technology",
+      "subcategory": "Productivity",
+      "tags": ["AI", "Productivity", "Tools", "Automation"],
+      "thumbnail": "images/blog/ai-tools.jpg",
+      "excerpt": "Discover the most powerful AI tools that can transform your workflow and skyrocket your productivity.",
+      "readTime": 10,
+      "featured": true,
+      "content": "<p>Artificial Intelligence is changing how we work...</p>",
+      "views": 2100,
+      "likes": 156
+    },
+    {
+      "id": "wordpress-seo-guide",
+      "title": "Complete WordPress SEO Guide for 2025",
+      "slug": "wordpress-seo-guide",
+      "author": "Lickens Ogal",
+      "date": "2025-01-05",
+      "category": "Digital Marketing",
+      "subcategory": "SEO",
+      "tags": ["WordPress", "SEO", "Marketing", "Google"],
+      "thumbnail": "images/blog/wordpress-seo.jpg",
+      "excerpt": "Master WordPress SEO with this comprehensive guide covering everything from basics to advanced techniques.",
+      "readTime": 12,
+      "featured": true,
+      "content": "<p>Search Engine Optimization is crucial for WordPress sites...</p>",
+      "views": 1800,
+      "likes": 134
+    },
+    {
+      "id": "ui-ux-best-practices",
+      "title": "UI/UX Design Best Practices for Modern Web Apps",
+      "slug": "ui-ux-best-practices",
+      "author": "Lickens Ogal",
+      "date": "2024-12-28",
+      "category": "Design",
+      "subcategory": "UI/UX",
+      "tags": ["UI/UX", "Design", "User Experience", "Web Design"],
+      "thumbnail": "images/blog/ui-ux-practices.jpg",
+      "excerpt": "Learn the essential principles and best practices for creating exceptional user experiences in web applications.",
+      "readTime": 9,
+      "featured": false,
+      "content": "<p>Great design is invisible. When users interact with your application...</p>",
+      "views": 980,
+      "likes": 72
+    },
+    {
+      "id": "freelancing-guide",
+      "title": "The Ultimate Guide to Starting Your Freelancing Career",
+      "slug": "freelancing-guide",
+      "author": "Lickens Ogal",
+      "date": "2024-12-20",
+      "category": "Business",
+      "subcategory": "Freelancing",
+      "tags": ["Freelancing", "Career", "Business", "Income"],
+      "thumbnail": "images/blog/freelancing.jpg",
+      "excerpt": "Everything you need to know to start and grow a successful freelancing career in tech.",
+      "readTime": 15,
+      "featured": false,
+      "content": "<p>Freelancing offers incredible freedom and opportunities...</p>",
+      "views": 2500,
+      "likes": 201
+    }
+  ],
+  "categories": [
+    {
+      "name": "Web Development",
+      "slug": "web-development",
+      "subcategories": [
+        { "name": "React", "slug": "react" },
+        { "name": "JavaScript", "slug": "javascript" },
+        { "name": "Frontend", "slug": "frontend" },
+        { "name": "Backend", "slug": "backend" }
+      ]
+    },
+    {
+      "name": "AI & Technology",
+      "slug": "ai-technology",
+      "subcategories": [
+        { "name": "AI Tools", "slug": "ai-tools" },
+        { "name": "Productivity", "slug": "productivity" },
+        { "name": "Automation", "slug": "automation" }
+      ]
+    },
+    {
+      "name": "Design",
+      "slug": "design",
+      "subcategories": [
+        { "name": "UI/UX", "slug": "ui-ux" },
+        { "name": "Graphic Design", "slug": "graphic-design" },
+        { "name": "Web Design", "slug": "web-design" }
+      ]
+    },
+    {
+      "name": "Digital Marketing",
+      "slug": "digital-marketing",
+      "subcategories": [
+        { "name": "SEO", "slug": "seo" },
+        { "name": "Social Media", "slug": "social-media" },
+        { "name": "Content Marketing", "slug": "content-marketing" }
+      ]
+    },
+    {
+      "name": "Business",
+      "slug": "business",
+      "subcategories": [
+        { "name": "Freelancing", "slug": "freelancing" },
+        { "name": "Entrepreneurship", "slug": "entrepreneurship" },
+        { "name": "Career Growth", "slug": "career-growth" }
+      ]
+    }
+  ]
+}
