@@ -48,6 +48,7 @@
 /* Hero Image at Top Center */
 .hero-image-top {
     margin-bottom: var(--space-6);
+    margin-top: var(--space-6);
     animation: fadeIn 0.8s ease-out;
 }
 
