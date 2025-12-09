@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional services including Web Development, WordPress, UI/UX Design, Graphic Design, Digital Marketing, Video Editing, and AI Solutions">
+    <title>Services | Lickens Ogal</title>
+    
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
 
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Lickens Ogal" class="logo-light">
+                <img src="images/logo-dark.png" alt="Lickens Ogal" class="logo-dark">
+            </a>
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>My <span class="highlight">Services</span></h1>
+            <p>Comprehensive digital solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern technologies. Responsive, fast, and scalable solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Web Applications</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> E-Commerce Solutions</li>
+                        <li><i class="fas fa-check"></i> API Integration</li>
+                    </ul>
+                    <a href="services/web-development.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress Development</h3>
+                    <p>Professional WordPress websites with custom themes, plugins, and WooCommerce integration.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Theme Development</li>
+                        <li><i class="fas fa-check"></i> Plugin Development</li>
+                        <li><i class="fas fa-check"></i> WooCommerce Setup</li>
+                        <li><i class="fas fa-check"></i> WordPress Optimization</li>
+                    </ul>
+                    <a href="services/wordpress-development.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive interfaces that enhance user experience and drive engagement through thoughtful design.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> User Research</li>
+                        <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check"></i> Visual Design</li>
+                        <li><i class="fas fa-check"></i> Usability Testing</li>
+                    </ul>
+                    <a href="services/ui-ux-design.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Visually compelling designs that communicate your brand message and capture attention.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Logo Design</li>
+                        <li><i class="fas fa-check"></i> Brand Identity</li>
+                        <li><i class="fas fa-check"></i> Marketing Materials</li>
+                        <li><i class="fas fa-check"></i> Social Media Graphics</li>
+                    </ul>
+                    <a href="services/graphic-design.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic marketing campaigns to grow your online presence and reach your target audience.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check"></i> Content Strategy</li>
+                        <li><i class="fas fa-check"></i> Analytics & Reporting</li>
+                    </ul>
+                    <a href="services/digital-marketing.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing that enhances storytelling and creates engaging content.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Professional Editing</li>
+                        <li><i class="fas fa-check"></i> Color Grading</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics</li>
+                        <li><i class="fas fa-check"></i> Sound Design</li>
+                    </ul>
+                    <a href="services/video-editing.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Resources</h3>
+                    <p>Innovative AI solutions and tools to enhance productivity and streamline workflows.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AI Tools & Solutions</li>
+                        <li><i class="fas fa-check"></i> Workflow Automation</li>
+                        <li><i class="fas fa-check"></i> Creative AI Applications</li>
+                        <li><i class="fas fa-check"></i> Training & Consultation</li>
+                    </ul>
+                    <a href="services/ai-resources.html" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need a Custom Solution?</h2>
+                <p>Let's discuss your project and find the perfect solution for your needs</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-comments"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <h3>Lickens Ogal</h3>
+                    <p>Full-Stack Developer & Digital Creator passionate about building innovative solutions.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/lickensogal" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lickensogal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/lickens_ogal" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Lickens_Ogal" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/web-development.html">Web Development</a></li>
+                        <li><a href="services/wordpress-development.html">WordPress</a></li>
+                        <li><a href="services/ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lickens Ogal. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--secondary-navy), #2a4d7a);
+            text-align: center;
+            color: white;
+        }
+        .page-hero h1 {
+            font-size: var(--text-6xl);
+            margin-bottom: var(--space-4);
+        }
+        .page-hero p {
+            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .service-features {
+            list-style: none;
+            margin: var(--space-5) 0;
+        }
+        .service-features li {
+            padding: var(--space-2) 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        .service-features i {
+            color: var(--primary-orange);
+            font-size: var(--text-sm);
+        }
+    </style>
+</body>
+</html>
