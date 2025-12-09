@@ -1,1 +1,418 @@
+/* ============================================
+   RESPONSIVE DESIGN - ALL BREAKPOINTS
+   ============================================ */
 
+/* ============================================
+   LARGE DESKTOPS (1440px and above)
+   ============================================ */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* ============================================
+   DESKTOPS (1200px - 1439px)
+   ============================================ */
+@media (max-width: 1439px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ============================================
+   LAPTOPS (992px - 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .section {
+        padding: var(--space-16) 0;
+    }
+}
+
+/* ============================================
+   TABLETS (768px - 991px)
+   ============================================ */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Typography */
+    h1 { font-size: var(--text-5xl); }
+    h2 { font-size: var(--text-4xl); }
+    h3 { font-size: var(--text-3xl); }
+    
+    /* Sections */
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    .section-title {
+        font-size: var(--text-4xl);
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--text-sm);
+    }
+    
+    .btn-lg {
+        padding: var(--space-4) var(--space-8);
+        font-size: var(--text-base);
+    }
+    
+    /* Grids */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ============================================
+   MOBILE LARGE (576px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    /* Typography */
+    h1 { font-size: var(--text-4xl); }
+    h2 { font-size: var(--text-3xl); }
+    h3 { font-size: var(--text-2xl); }
+    h4 { font-size: var(--text-xl); }
+    
+    /* Sections */
+    .section {
+        padding: var(--space-10) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-10);
+    }
+    
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    /* Grids */
+    .services-grid,
+    .projects-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Cards */
+    .service-card,
+    .project-card,
+    .blog-card {
+        padding: var(--space-6);
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        bottom: var(--space-6);
+        right: var(--space-6);
+    }
+    
+    .theme-toggle i {
+        font-size: var(--text-lg);
+    }
+}
+
+/* ============================================
+   MOBILE MEDIUM (480px - 575px)
+   ============================================ */
+@media (max-width: 575px) {
+    .container {
+        max-width: 100%;
+        padding: 0 var(--space-5);
+    }
+    
+    /* Typography */
+    h1 { font-size: var(--text-3xl); }
+    h2 { font-size: var(--text-2xl); }
+    h3 { font-size: var(--text-xl); }
+    
+    /* Sections */
+    .section {
+        padding: var(--space-8) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-8);
+    }
+    
+    .section-label {
+        font-size: 0.7rem;
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--text-sm);
+    }
+    
+    /* Grids */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+}
+
+/* ============================================
+   MOBILE SMALL (320px - 479px)
+   ============================================ */
+@media (max-width: 479px) {
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    /* Typography */
+    h1 { font-size: var(--text-2xl); }
+    h2 { font-size: var(--text-xl); }
+    
+    /* Sections */
+    .section {
+        padding: var(--space-6) 0;
+    }
+    
+    /* Cards */
+    .service-card,
+    .project-card,
+    .blog-card {
+        padding: var(--space-5);
+        border-radius: var(--radius-lg);
+    }
+    
+    /* Images */
+    .project-image,
+    .blog-image {
+        height: 180px;
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        bottom: var(--space-5);
+        right: var(--space-5);
+    }
+    
+    .theme-toggle i {
+        font-size: var(--text-base);
+    }
+}
+
+/* ============================================
+   LANDSCAPE MOBILE DEVICES
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--space-12) 0;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .image-glow {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* ============================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ============================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn {
+        min-height: 44px;
+        padding: var(--space-3) var(--space-6);
+    }
+    
+    .nav-link {
+        padding: var(--space-3) var(--space-2);
+    }
+    
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .project-card:hover,
+    .blog-card:hover {
+        transform: none;
+    }
+    
+    /* Show overlay on touch */
+    .project-overlay {
+        opacity: 0.9;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .header,
+    .theme-toggle,
+    .footer,
+    .back-to-top,
+    .hero-buttons,
+    .hero-social,
+    .scroll-indicator,
+    .section-cta,
+    .final-cta {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-light: rgba(0, 0, 0, 0.5);
+        --shadow-medium: rgba(0, 0, 0, 0.7);
+        --shadow-heavy: rgba(0, 0, 0, 0.9);
+    }
+    
+    .btn {
+        border-width: 3px;
+    }
+    
+    .card {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ============================================
+   DARK MODE MEDIA QUERY
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Automatically apply dark mode if user prefers it */
+    /* This is overridden by manual theme selection */
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+/* Show/Hide Classes */
+.hide-mobile {
+    display: block;
+}
+
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none;
+    }
+    
+    .show-mobile {
+        display: block;
+    }
+}
+
+/* Text Alignment */
+@media (max-width: 767px) {
+    .text-center-mobile {
+        text-align: center;
+    }
+}
+
+/* Spacing Adjustments */
+@media (max-width: 767px) {
+    .mb-mobile-4 {
+        margin-bottom: var(--space-4);
+    }
+    
+    .mt-mobile-4 {
+        margin-top: var(--space-4);
+    }
+    
+    .p-mobile-4 {
+        padding: var(--space-4);
+    }
+  }
