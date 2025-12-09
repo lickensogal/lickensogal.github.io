@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of web development, WordPress, design, and digital projects by Lickens Ogal">
+    <title>Projects | Lickens Ogal</title>
+    
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
 
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Lickens Ogal" class="logo-light">
+                <img src="images/logo-dark.png" alt="Lickens Ogal" class="logo-dark">
+            </a>
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>My <span class="highlight">Projects</span></h1>
+            <p>Showcasing my work and achievements</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="projects-filter">
+                <button class="filter-btn active" data-category="all">All Projects</button>
+                <button class="filter-btn" data-category="Web Development">Web Development</button>
+                <button class="filter-btn" data-category="WordPress Development">WordPress</button>
+                <button class="filter-btn" data-category="UI/UX Design">UI/UX Design</button>
+                <button class="filter-btn" data-category="Graphic Design">Graphic Design</button>
+                <button class="filter-btn" data-category="Digital Marketing">Marketing</button>
+            </div>
+
+            <div id="all-projects" class="projects-grid">
+                <!-- Projects loaded dynamically from JSON -->
+            </div>
+
+            <div id="no-projects" class="no-results" style="display: none;">
+                <i class="fas fa-folder-open"></i>
+                <p>No projects found in this category</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Project in Mind?</h2>
+                <p>Let's work together to bring your vision to life</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <h3>Lickens Ogal</h3>
+                    <p>Full-Stack Developer & Digital Creator passionate about building innovative solutions.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/lickensogal" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lickensogal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/lickens_ogal" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Lickens_Ogal" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/web-development.html">Web Development</a></li>
+                        <li><a href="services/wordpress-development.html">WordPress</a></li>
+                        <li><a href="services/ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lickens Ogal. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/projects-loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize filter functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectsContainer = document.getElementById('all-projects');
+            const noResults = document.getElementById('no-projects');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Filter projects
+                    const category = btn.dataset.category;
+                    if (window.projectsLoader) {
+                        window.projectsLoader.renderAllProjects(category === 'all' ? 'all' : category);
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--secondary-navy), #2a4d7a);
+            text-align: center;
+            color: white;
+        }
+        .page-hero h1 {
+            font-size: var(--text-6xl);
+            margin-bottom: var(--space-4);
+        }
+        .page-hero p {
+            font-size: var(--text-xl);
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            margin-bottom: var(--space-12);
+        }
+        .filter-btn {
+            padding: var(--space-3) var(--space-6);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+        .no-results {
+            text-align: center;
+            padding: var(--space-16);
+            color: var(--text-secondary);
+        }
+        .no-results i {
+            font-size: var(--text-6xl);
+            color: var(--primary-orange);
+            margin-bottom: var(--space-4);
+        }
+        .no-results p {
+            font-size: var(--text-xl);
+        }
+        @media (max-width: 768px) {
+            .projects-filter {
+                gap: var(--space-2);
+            }
+            .filter-btn {
+                padding: var(--space-2) var(--space-4);
+                font-size: var(--text-sm);
+            }
+        }
+    </style>
+</body>
+</html>
