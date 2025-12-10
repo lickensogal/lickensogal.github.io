@@ -521,6 +521,7 @@
             color: var(--text-primary);
         }
         
+            
         /* Share Buttons */
         .share-buttons-vertical {
             display: flex;
@@ -529,4 +530,139 @@
         }
         
         .share-btn {
-            padding: var(--space-4) var(--sp
+            padding: var(--space-4) var(--space-5);
+            border-radius: var(--radius-md);
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: all var(--transition-base);
+            font-size: var(--text-base);
+        }
+        
+        .share-btn:hover {
+            transform: translateX(5px);
+        }
+        
+        .share-btn.facebook { background: #3b5998; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.linkedin { background: #0077b5; }
+        .share-btn.copy { background: var(--primary-orange); }
+        
+        /* Post Meta Sidebar */
+        .post-meta-sidebar .meta-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .post-meta-sidebar .meta-item:last-child {
+            border-bottom: none;
+        }
+        
+        .post-meta-sidebar strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .post-meta-sidebar span {
+            color: var(--text-secondary);
+        }
+        
+        /* Related Posts */
+        .related-post-item {
+            display: flex;
+            gap: var(--space-4);
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all var(--transition-base);
+        }
+        
+        .related-post-item:last-child {
+            border-bottom: none;
+        }
+        
+        .related-post-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .related-post-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        
+        .related-post-info h4 {
+            font-size: var(--text-base);
+            margin-bottom: var(--space-2);
+            line-height: 1.4;
+        }
+        
+        .related-post-meta {
+            display: flex;
+            gap: var(--space-3);
+            font-size: var(--text-xs);
+            color: var(--text-tertiary);
+        }
+        
+        .related-post-meta span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+        }
+        
+        .no-related {
+            color: var(--text-tertiary);
+            font-style: italic;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .blog-single-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-sidebar {
+                position: static;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-single-hero {
+                padding: 120px 0 40px;
+            }
+            
+            .post-meta-header {
+                gap: var(--space-4);
+                font-size: var(--text-sm);
+            }
+            
+            .author-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-avatar {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .author-avatar i {
+                font-size: var(--text-4xl);
+            }
+        }
+    </style>
+</body>
+</html>
