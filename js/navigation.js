@@ -1,194 +1,162 @@
-// ============================================
-// NAVIGATION HANDLING
-// ============================================
+// Enhanced Navigation with Dropdown Support
 
-class Navigation {
-    constructor() {
-        this.header = document.getElementById('header');
-        this.navbar = document.getElementById('navbar');
-        this.menuToggle = document.getElementById('menu-toggle');
-        this.navLinks = document.querySelectorAll('.nav-link');
-        this.lastScroll = 0;
-        this.init();
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    initMobileMenu();
+    handleScrollHeader();
+    setActiveNavLink();
+});
 
-    init() {
-        this.initMobileMenu();
-        this.initSmoothScroll();
-        this.initScrollEffects();
-        this.initActiveLink();
-    }
-
-    // Mobile Menu Toggle
-    initMobileMenu() {
-        if (!this.menuToggle || !this.navbar) return;
-
-        this.menuToggle.addEventListener('click', () => {
-            this.menuToggle.classList.toggle('active');
-            this.navbar.classList.toggle('active');
-            document.body.style.overflow = this.navbar.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close menu when clicking nav link
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                this.menuToggle.classList.remove('active');
-                this.navbar.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.navbar.contains(e.target) && 
-                !this.menuToggle.contains(e.target) && 
-                this.navbar.classList.contains('active')) {
-                this.menuToggle.classList.remove('active');
-                this.navbar.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close menu on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.navbar.classList.contains('active')) {
-                this.menuToggle.classList.remove('active');
-                this.navbar.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+function initNavigation() {
+    const header = document.getElementById('header');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    
+    // Handle mobile menu toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
         });
     }
-
-    // Smooth Scroll for Anchor Links
-    initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', (e) => {
-                const href = anchor.getAttribute('href');
-                
-                // Skip if href is just "#"
-                if (href === '#') {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    return;
-                }
-
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    const headerHeight = this.header ? this.header.offsetHeight : 0;
-                    const targetPosition = target.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    }
-
-    // Scroll Effects (Sticky Header, Hide/Show on Scroll)
-    initScrollEffects() {
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            // Add scrolled class when scrolling down
-            if (currentScroll > 100) {
-                this.header?.classList.add('scrolled');
-            } else {
-                this.header?.classList.remove('scrolled');
-            }
-
-            // Hide/Show header on scroll (optional - uncomment to enable)
-            /*
-            if (currentScroll > this.lastScroll && currentScroll > 500) {
-                this.header?.classList.add('header-hidden');
-            } else {
-                this.header?.classList.remove('header-hidden');
-            }
-            */
-
-            this.lastScroll = currentScroll;
-        });
-    }
-
-    // Active Link Highlighting
-    initActiveLink() {
-        // Get current page
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-        // Highlight active page in navigation
-        this.navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href').split('/').pop();
-            
-            if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'index.html')) {
-                link.classList.add('active');
-            }
-        });
-
-        // For single page sections, highlight based on scroll position
-        if (currentPage === 'index.html' || currentPage === '') {
-            window.addEventListener('scroll', () => {
-                this.highlightSectionLink();
-            });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!header.contains(e.target) && navbar.classList.contains('active')) {
+            navbar.classList.remove('active');
+            menuToggle.classList.remove('active');
         }
-    }
+    });
+    
+    // Handle dropdown on mobile
+    initMobileDropdowns();
+}
 
-    // Highlight navigation link based on current section in view
-    highlightSectionLink() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollY = window.pageYOffset;
-
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 150;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                this.navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
+function initMobileDropdowns() {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const navItem = toggle.closest('.nav-item');
+                navItem.classList.toggle('active');
             }
         });
-    }
+    });
+}
 
-    // Back to Top Functionality
-    initBackToTop() {
-        const backToTopBtn = document.getElementById('back-to-top');
-        if (!backToTopBtn) return;
-
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 500) {
-                backToTopBtn.style.opacity = '1';
-                backToTopBtn.style.visibility = 'visible';
-            } else {
-                backToTopBtn.style.opacity = '0';
-                backToTopBtn.style.visibility = 'hidden';
+function initMobileMenu() {
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    
+    // Close mobile menu when clicking a nav link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navbar.classList.remove('active');
+                document.getElementById('menu-toggle').classList.remove('active');
             }
         });
+    });
+}
 
-        // Scroll to top on click
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+function handleScrollHeader() {
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
+
+function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    
+    // Remove all active classes
+    navLinks.forEach(link => link.classList.remove('active'));
+    dropdownItems.forEach(item => item.classList.remove('active'));
+    
+    // Set active class based on current path
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        
+        if (currentPath === linkPath || 
+            (linkPath !== '/' && currentPath.includes(linkPath))) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Set active for dropdown items
+    dropdownItems.forEach(item => {
+        const itemPath = new URL(item.href).pathname;
+        
+        if (currentPath === itemPath || currentPath.includes(itemPath)) {
+            item.classList.add('active');
+            
+            // Also mark the parent dropdown as active
+            const parentDropdown = item.closest('.nav-item').querySelector('.dropdown-toggle');
+            if (parentDropdown) {
+                parentDropdown.classList.add('active');
+            }
+        }
+    });
+    
+    // Special handling for services pages
+    if (currentPath.includes('/services/')) {
+        const servicesLink = document.querySelector('.nav-link.dropdown-toggle');
+        if (servicesLink) {
+            servicesLink.classList.add('active');
+        }
     }
 }
 
-// Initialize navigation when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const navigation = new Navigation();
-    navigation.initBackToTop();
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        if (href !== '#' && href !== '#!') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
 });
 
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Navigation;
-                }
+// Handle window resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        const navbar = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menu-toggle');
+        
+        if (window.innerWidth > 768) {
+            navbar.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
+            }
+        }
+    }, 250);
+});
