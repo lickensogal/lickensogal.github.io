@@ -126,9 +126,7 @@
   <li><strong>useContext:</strong> Share data globally across components</li>
   <li><strong>useReducer:</strong> Handle complex state logic</li>
 </ul>
-
 <h2>Building Your First React Application</h2>
-
 <h3>Example Project: To-Do List</h3>
 <p>Creating a simple <strong>To-Do List</strong> is a great way to practice:</p>
 <ul>
@@ -137,9 +135,7 @@
   <li>Passing props for dynamic content</li>
   <li>Updating state when adding or deleting tasks</li>
 </ul>
-
 <h2>React Developer Tools</h2>
-
 <h3>Using Developer Tools</h3>
 <p><strong>React Developer Tools</strong> browser extension allows you to inspect the component tree, props, and state in real time. This is essential for debugging and optimizing your applications.</p>
 
@@ -160,9 +156,7 @@
   <li>Prefer functional components with hooks</li>
   <li>Practice regularly with mini-projects</li>
 </ul>
-
 <h2>Next Steps After Learning Basics</h2>
-
 <ul>
   <li>Learn <strong>React Router</strong> for navigation</li>
   <li>Use <strong>Context API</strong> or Redux for global state management</li>
@@ -173,13 +167,11 @@
 
 <h2>Conclusion</h2>
 
-<p>React is a powerful and versatile library that enables developers to build <strong>dynamic</strong>, <strong>interactive</strong>, and <strong>high-performance</strong> web applications. By mastering components, JSX, props, state, and hooks, you will be fully equipped to create professional-grade React applications.</p>
-
-<p>This guide has provided a comprehensive introduction to React in 2025. Continue building projects, exploring advanced features, and React will become an intuitive part of your development workflow.</p>",
+<p>React is a powerful and versatile library that enables developers to build <strong>dynamic</strong>, <strong>interactive</strong>, and <strong>high-performance</strong> web applications. By mastering components, JSX, props, state, and hooks, you will be fully equipped to create professional-grade React applications.</p><p>This guide has provided a comprehensive introduction to React in 2025. Continue building projects, exploring advanced features, and React will become an intuitive part of your development workflow.</p>",
 "views": 1250,
 "likes": 89
 },
-    {
+   {
       "id": "ai-tools-productivity",
       "title": "10 AI Tools That Will Boost Your Productivity in 2025",
       "slug": "ai-tools-productivity",
