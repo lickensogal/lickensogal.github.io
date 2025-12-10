@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Lickens Ogal</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Lickens Ogal" class="logo-light">
+                <img src="images/logo-dark.png" alt="Lickens Ogal" class="logo-dark">
+            </a>
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="blog-single-hero">
+        <div class="container">
+            <a href="blog.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+            <div id="post-header">
+                <!-- Loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="blog-single-layout">
+                <article class="blog-post-content">
+                    <div id="post-content">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </article>
+
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Share This Post</h3>
+                        <div id="share-buttons" class="share-buttons-vertical">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Post Details</h3>
+                        <div id="post-meta" class="post-meta-sidebar">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Related Posts</h3>
+                        <div id="related-posts">
+                            <!-- Loaded dynamically -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <h3>Lickens Ogal</h3>
+                    <p>Full-Stack Developer & Digital Creator passionate about building innovative solutions.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/lickensogal" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/lickensogal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/lickens_ogal" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571649702280" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/Lickens_Ogal" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/web-development.html">Web Development</a></li>
+                        <li><a href="services/wordpress-development.html">WordPress</a></li>
+                        <li><a href="services/ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="services/graphic-design.html">Graphic Design</a></li>
+                        <li><a href="services/digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lickens Ogal. All rights reserved.</p>
+                <button class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/blog-loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+            
+            if (!postId) {
+                window.location.href = 'blog.html';
+                return;
+            }
+            
+            // Wait for blog loader to initialize
+            await new Promise(resolve => setTimeout(resolve, 500));
+            
+            const post = window.blogLoader?.getPostById(postId);
+            
+            if (!post) {
+                window.location.href = 'blog.html';
+                return;
+            }
+            
+            // Update page title
+            document.title = `${post.title} | Lickens Ogal`;
+            
+            // Format date
+            const date = new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric', month: 'long', day: 'numeric'
+            });
+            
+            // Build post header
+            const headerHTML = `
+                <div class="post-category-badge">${post.category}</div>
+                <h1 class="post-title">${post.title}</h1>
+                <div class="post-meta-header">
+                    <span><i class="fas fa-user"></i> ${post.author}</span>
+                    <span><i class="fas fa-calendar"></i> ${date}</span>
+                    <span><i class="fas fa-clock"></i> ${post.readTime} min read</span>
+                    <span><i class="fas fa-eye"></i> ${post.views} views</span>
+                </div>
+            `;
+            document.getElementById('post-header').innerHTML = headerHTML;
+            
+            // Build post content
+            const contentHTML = `
+                <img src="${post.thumbnail}" alt="${post.title}" class="post-featured-image">
+                
+                <div class="post-body">
+                    ${post.content}
+                </div>
+                
+                <div class="post-tags">
+                    <strong>Tags:</strong>
+                    ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                
+                <div class="post-author">
+                    <div class="author-info">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-details">
+                            <h4>Written by ${post.author}</h4>
+                            <p>Full-Stack Developer & Digital Creator sharing knowledge about web development, design, and technology.</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('post-content').innerHTML = contentHTML;
+            
+            // Build share buttons
+            const currentUrl = encodeURIComponent(window.location.href);
+            const postTitle = encodeURIComponent(post.title);
+            
+            const shareHTML = `
+                <a href="https://facebook.com/sharer/sharer.php?u=${currentUrl}" 
+                   target="_blank" class="share-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Share on Facebook
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=${currentUrl}&text=${postTitle}" 
+                   target="_blank" class="share-btn twitter">
+                    <i class="fab fa-twitter"></i> Share on Twitter
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${postTitle}" 
+                   target="_blank" class="share-btn linkedin">
+                    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+                </a>
+                <button onclick="copyLink()" class="share-btn copy">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+            `;
+            document.getElementById('share-buttons').innerHTML = shareHTML;
+            
+            // Post meta sidebar
+            const metaHTML = `
+                <div class="meta-item">
+                    <strong>Author</strong>
+                    <span>${post.author}</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Category</strong>
+                    <span>${post.category}</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Subcategory</strong>
+                    <span>${post.subcategory}</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Published</strong>
+                    <span>${date}</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Views</strong>
+                    <span>${post.views.toLocaleString()}</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Likes</strong>
+                    <span>${post.likes}</span>
+                </div>
+            `;
+            document.getElementById('post-meta').innerHTML = metaHTML;
+            
+            // Related posts
+            const relatedPosts = window.blogLoader?.getRelatedPosts(postId, post.category, 3) || [];
+            
+            if (relatedPosts.length > 0) {
+                const relatedHTML = relatedPosts.map(p => {
+                    const relatedDate = new Date(p.date).toLocaleDateString('en-US', {
+                        month: 'short', day: 'numeric', year: 'numeric'
+                    });
+                    return `
+                        <a href="blog-single.html?id=${p.id}" class="related-post-item">
+                            <img src="${p.thumbnail}" alt="${p.title}">
+                            <div class="related-post-info">
+                                <h4>${p.title}</h4>
+                                <div class="related-post-meta">
+                                    <span><i class="fas fa-calendar"></i> ${relatedDate}</span>
+                                    <span><i class="fas fa-clock"></i> ${p.readTime} min</span>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+                document.getElementById('related-posts').innerHTML = relatedHTML;
+            } else {
+                document.getElementById('related-posts').innerHTML = '<p class="no-related">No related posts found.</p>';
+            }
+        });
+        
+        // Copy link function
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const btn = document.querySelector('.share-btn.copy');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#27ae60';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
+
+    <style>
+        /* Blog Single Hero */
+        .blog-single-hero {
+            padding: 140px 0 60px;
+            background: linear-gradient(135deg, var(--secondary-navy), #2a4d7a);
+            color: white;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: white;
+            text-decoration: none;
+            margin-bottom: var(--space-8);
+            font-weight: 600;
+            transition: gap var(--transition-fast);
+        }
+        
+        .back-link:hover {
+            gap: var(--space-3);
+        }
+        
+        .post-category-badge {
+            display: inline-block;
+            padding: var(--space-2) var(--space-5);
+            background: var(--primary-orange);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-5);
+        }
+        
+        .post-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: var(--space-6);
+        }
+        
+        .post-meta-header {
+            display: flex;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+            font-size: var(--text-base);
+            opacity: 0.95;
+        }
+        
+        .post-meta-header span {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        /* Blog Single Layout */
+        .blog-single-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-12);
+            align-items: start;
+        }
+        
+        .blog-post-content {
+            max-width: 800px;
+        }
+        
+        .post-featured-image {
+            width: 100%;
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-10);
+            box-shadow: 0 8px 30px var(--shadow-medium);
+        }
+        
+        /* Post Body */
+        .post-body {
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-10);
+        }
+        
+        .post-body h2 {
+            font-size: var(--text-3xl);
+            color: var(--text-primary);
+            margin-top: var(--space-10);
+            margin-bottom: var(--space-5);
+        }
+        
+        .post-body h3 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
+        }
+        
+        .post-body p {
+            margin-bottom: var(--space-5);
+        }
+        
+        .post-body ul, .post-body ol {
+            margin: var(--space-5) 0;
+            padding-left: var(--space-8);
+            list-style: disc;
+        }
+        
+        .post-body li {
+            margin-bottom: var(--space-3);
+        }
+        
+        .post-body blockquote {
+            border-left: 4px solid var(--primary-orange);
+            padding-left: var(--space-6);
+            margin: var(--space-8) 0;
+            font-style: italic;
+            color: var(--text-tertiary);
+        }
+        
+        .post-body code {
+            background: var(--bg-secondary);
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.9em;
+        }
+        
+        /* Post Tags */
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            align-items: center;
+            padding: var(--space-8) 0;
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: var(--space-10);
+        }
+        
+        .post-tags strong {
+            color: var(--text-primary);
+        }
+        
+        .post-tags .tag {
+            padding: var(--space-2) var(--space-4);
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-full);
+            color: var(--primary-orange);
+            font-weight: 600;
+            font-size: var(--text-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .post-tags .tag:hover {
+            background: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+        }
+        
+        /* Post Author */
+        .post-author {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+        }
+        
+        .author-info {
+            display: flex;
+            gap: var(--space-6);
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--accent-orange));
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .author-avatar i {
+            font-size: var(--text-5xl);
+            color: white;
+        }
+        
+        .author-details h4 {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-2);
+        }
+        
+        .author-details p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Sidebar */
+        .blog-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-widget {
+            background: var(--bg-secondary);
+            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-8);
+            box-shadow: 0 4px 15px var(--shadow-light);
+        }
+        
+        .sidebar-widget h3 {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-5);
+            color: var(--text-primary);
+        }
+        
+        /* Share Buttons */
+        .share-buttons-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+        
+        .share-btn {
+            padding: var(--space-4) var(--sp
