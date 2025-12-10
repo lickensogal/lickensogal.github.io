@@ -1,4 +1,7 @@
-/* Header Styles with Dropdown Navigation */
+/* ============================================
+   HEADER & NAVIGATION STYLES
+   ============================================ */
+
 .header {
     position: fixed;
     top: 0;
@@ -247,7 +250,10 @@
     background: rgba(255, 98, 0, 0.15);
 }
 
-/* Responsive Styles */
+/* ============================================
+   RESPONSIVE - HEADER
+   ============================================ */
+
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -331,4 +337,4 @@
         margin-top: var(--space-4);
         text-align: center;
     }
-    }
+}
